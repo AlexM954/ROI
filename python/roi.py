@@ -18,6 +18,10 @@ def new(x, y):
     roi = deepcopy(t)
     roi["x"] = np.asarray([x])
     roi["y"] = np.asarray([y])
-    roi["mean"] = x
+    roi["mean"] = y
 
     return roi
+
+
+def mean(roi):
+    roi["mean"] = np.mean(roi["y"])
