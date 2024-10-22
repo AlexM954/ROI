@@ -25,3 +25,9 @@ def new(x, y):
 
 def mean(roi):
     roi["mean"] = np.mean(roi["y"])
+
+
+def extend(roi, x, y):
+    roi["x"] = np.append(roi["x"], x)
+    roi["y"] = np.append(roi["y"], y)
+    mean(roi)
