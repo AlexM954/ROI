@@ -42,3 +42,14 @@ def closest_rel(roi, y, ppm):
 
     else:
         return None
+
+
+def closest_abs(roi, y, val):
+    diff = abs(y - roi["mean"])
+    closest = np.min(diff)
+
+    if closest < val:
+        return y[np.where(diff == closest)][0]
+
+    else:
+        return None
