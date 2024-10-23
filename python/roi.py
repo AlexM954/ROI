@@ -31,3 +31,14 @@ def extend(roi, x, y):
     roi["x"] = np.append(roi["x"], x)
     roi["y"] = np.append(roi["y"], y)
     mean(roi)
+
+
+def closest_rel(roi, y, ppm):
+    diff = abs((y / roi["mean"] - 1) * 1E6)
+    closest = np.min(diff)
+
+    if closest < ppm:
+        return y[np.where(diff == closest)][0]
+
+    else:
+        return None
