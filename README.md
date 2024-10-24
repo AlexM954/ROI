@@ -6,3 +6,10 @@ The region of interest (ROI) algorithm aims to extract features in complex data,
 1. Provide multiple implementations of the ROI algorithm written in various languages.
 2. Optimize the performance of the implementations to be as fast a possible in the given language.
 3. Provide improvements to the algorithm, if possible.
+
+# Installation
+### Python
+In order to install the Python implementation of the ROI algorithm. Pip install it using the following command:
+```
+pip install git+https://github.com/AlexM954/ROI.git#egg=roi&subdirectory=python
+```
